@@ -2,15 +2,16 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <base href="/">
+  <title>Angular WinJS Sample</title>
+  <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" href="node_modules/winjs/css/ui-dark.min.css">
   <link rel="stylesheet" href="styles/main.css">
 </head>
-<body>
+<body ng-app="aws" ng-controller="AppController as app">
 
 <div id="app" class="show-home win-type-body">
     <!-- SPLIT VIEW -->
-
     <div class="splitView" data-win-control="WinJS.UI.SplitView">
 
         <!-- Pane area -->
@@ -21,7 +22,7 @@
                     data-win-control="WinJS.UI.SplitViewPaneToggle"
                     data-win-options="{ splitView: select('.splitView') }"
                 ></button>
-                <div class="title"><h2 class="win-h2">All Trails</h2></div>
+                <div class="title"><h2 class="win-h2">{{app.name}}</h2></div>
             </div>
 
             <div class="nav-commands">
@@ -31,6 +32,7 @@
                 <div data-trail-id="2" data-win-control="WinJS.UI.SplitViewCommand" data-win-options="{ label: 'Alki Trail', icon: 'mappin', oninvoked: mySplitView.trailClicked}"></div>
             </div>
         </div>
+
         <!-- Content area -->
         <button
             class="win-splitviewpanetoggle second-button not-small"
@@ -54,7 +56,8 @@
                 <!-- END FLIP VIEW -->
                 
                 <!-- DESCRIPTION -->
-                <div class="description"> 
+                <div class="description">
+                    
                     <!-- this is where the title, location and description are injected for each hiking page -->
                     <h2 class="trail-title"></h2>
                     <p class="trail-location"></p>
@@ -124,6 +127,8 @@
    
   <script src="node_modules/winjs/js/base.min.js"></script>
   <script src="node_modules/winjs/js/ui.min.js"></script>
+  <script src="node_modules/angular/angular.min.js"></script>
+  <script src="node_modules/angular-winjs/js/angular-winjs.js"></script>
 
   <script src="scripts/main.js"></script>
 </body>

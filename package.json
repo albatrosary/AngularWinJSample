@@ -4,12 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "http-server -p 9000"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "angular-winjs": "^4.4.0",
     "winjs": "^4.4.0"
+  },
+  "devDependencies": {
   }
 }

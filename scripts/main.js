@@ -1,7 +1,18 @@
 (function () {
     "use strict";
 
-    var app = WinJS.Application;
+  angular
+    .module('aws', ['winjs'])
+    .controller('AppController', AppController);
+
+  AppController.$inject = [];
+
+  function AppController () {
+    this.name = 'All Trails';
+    
+  }
+
+   var app = WinJS.Application;
     //SplitView
     var mySplitView = window.mySplitView = { 
         splitView: null, 
@@ -17,7 +28,7 @@
     };
     //END SPLIT VIEW
 
-function updateUI(trail) {
+    function updateUI(trail) {
 
         //add remove tags
         document.getElementById("app").classList.add("show-trail");
@@ -137,5 +148,6 @@ function updateUI(trail) {
             })
         }
     });
+
     app.start();
 })();
