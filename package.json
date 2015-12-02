@@ -12,6 +12,5 @@
     "angular-winjs": "^4.4.0",
     "winjs": "^4.4.0"
   },
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }
