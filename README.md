@@ -1,1 +1,6 @@
 # AngularWinJSample
+
+## Setup
+
+```
+git clone 
